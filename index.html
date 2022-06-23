@@ -11,11 +11,37 @@
 <body>
     <div class="page">
         <h1 class="header">Library App</h1>
-        <button class="new-book-button" id="new-book-button">Add New Book</button>
+        <button class="new-book-button" id="modalBtn">Add New Book</button>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
 
-        <div class="bookshelf" id="bookshelf">
-            
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="newBookForm">
+                    <div>
+                        <label for="bookTitle">Title: </label>
+                        <input type="text" id="bookTitle" name="bookTitle" required>
+                    </div>
+                    <div>
+                        <label for="bookAuthor">Author: </label>
+                        <input type="text" id="bookAuthor" name="bookAuthor" required>
+                    </div>
+                    <div>
+                        <label for="read">Read</label>
+                        <input type="radio" id="read" name="readStatus">
+                        <label for="notRead">Not Read</label>
+                        <input type="radio" id="notRead" name="readStatus" checked>
+                    </div>
+                    <button type="submit" id="newBookBtn">Add Book</button>
+                </form>
+                
+            </div>
+  
         </div>
+
+
+        <div class="bookshelf" id="bookshelf"></div>
     </div>
 </body>
 </html>
