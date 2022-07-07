@@ -1,86 +1,70 @@
-html, body {
-    padding: 0;
-    margin: 0;
-    height: 100vh;
+
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
-/* LAYOUT */
+:root {
+  --darkshade: #171D1D;
+  --lightshade: #CDDEDE;
+}
 
 .page {
-    height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: var(--darkshade);
+  color: var(--lightshade);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
 }
 
 .header {
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
 
 }
 
-.new-book-button {
+.books {
+  min-height: 70%;
+  width: min(90%, 900px);
 
-}
+  margin-top: 50px;
 
-.bookshelf {
-
-
-    overflow: auto;
-
-    gap: 5px;
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(auto-fill, 200px);
-    grid-auto-flow: row;
-    grid-auto-rows: 250px;
-
-    width: min(80%, 900px);
-    height: 100%;
-    margin: 40px;
-}
-
-/* STYLIN */
-
-.book {
-    background-color: gray;
-}
-
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+  display: grid;
+  grid-auto-rows: 200px;
+  grid-template-columns: repeat(auto-fill, max(30%,250px));
+  gap: 30px;
   
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
+  justify-content: center;
+}
+
+.books > div {
+  border: 1px solid red;
+  background-color: ;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
   
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkshade);
+}
